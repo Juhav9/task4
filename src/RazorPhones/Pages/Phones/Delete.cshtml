@@ -1,0 +1,15 @@
+﻿@page "{id:int?}"
+@model RazorPhones.Pages.Phones.DeleteModel
+@{
+}
+<h2>Delete</h2>
+<form method="post">
+	ID:<input name="Phone.Id" value="@Model.Phone.Id" readonly/><br>
+	MAKE:<input name="Phone.Make" value="@Model.Phone.Make" readonly/><br>
+	MODEL:<input name="Phone.Model" value="@Model.Phone.Model" readonly/><br>
+	RAM:<input name="Phone.RAM" value="@Model.Phone.RAM" readonly/><br>
+	PublishDate:<input name="Phone.PublishDate" type="date" value="@Model.Phone.PublishDate.ToString("yyyy-MM-dd")" readonly/><br>
+	Created:<input name="Phone.Created" type="date"  value="@Model.Phone.Created.ToString("yyyy-MM-dd")" readonly/> <br>
+	Modified:<input name="Phone.Modified" type="date" value="@Model.Phone.Modified.ToString("yyyy-MM-dd")" readonly/>
+	<button type="submit">Delete</button>
+</form>

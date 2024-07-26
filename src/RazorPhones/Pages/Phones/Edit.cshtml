@@ -1,0 +1,15 @@
+﻿@page "{id:int?}"
+@model RazorPhones.Pages.Phones.EditModel
+@{
+}
+<h2>Edit</h2>
+<form method="post">
+	ID:<input name="Phone.Id"  asp-for="Phone.Id" value="@Model.Phone.Id" readonly/><br>
+	MAKE:<input name="Phone.Make" asp-for="Phone.Make" value="" /><br>
+	MODEL:<input name="Phone.Model"  asp-for="Phone.Model" value=""/><br>
+	RAM:<input name="Phone.RAM" asp-for="Phone.RAM" value=""/><br>
+	PublishDate:<input name="Phone.PublishDate" type="text" asp-for="Phone.PublishDate" value=""/><br>
+	Created:<input name="Phone.Created" type="date" asp-for="Phone.Created" value="@Model.Phone.Created.ToString("yyyy-MM-dd")" readonly/> <br>
+	Modified:<input name="Phone.Modified" type="date" asp-for="Phone.Modified" value="@Model.Phone.Modified.ToString("yyyy-MM-dd")" readonly/>
+	<button type="submit">Edit</button>
+</form>

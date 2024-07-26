@@ -1,0 +1,16 @@
+﻿@page
+@model RazorPhones.Pages.PhonesModel
+@{
+
+}
+<ul class="phones">
+	@{
+	foreach(var phone in Model.Phones)
+	{
+				<li>@phone.Make @phone.Model <a asp-page="./Edit" asp-route-id="@phone.Id">edit</a> <a asp-page="./Delete" asp-route-id="@phone.Id">delete</a></li>
+	}
+	}
+</ul>
+
+<a asp-page="./Add" class="btn">Add</a>
+

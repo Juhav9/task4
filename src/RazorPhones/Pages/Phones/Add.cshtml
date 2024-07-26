@@ -1,0 +1,13 @@
+﻿@page
+@model RazorPhones.Pages.Phones.AddModel
+@{
+}
+<h3>Add New Phone</h3>
+<form method="post">
+	Make:<input asp-for="Phone.Make"/><br />
+	Model:<input asp-for="Phone.Model"/><br />
+	Ram: <input asp-for="Phone.RAM"/><br/>
+	PublishDate: <input asp-for="Phone.PublishDate" step="Any"/>
+	<button type="submit">Add</button>
+</form>
+
